@@ -8,8 +8,8 @@ using UnityEngine;
 
 public class AndroidNotificationHandler : MonoBehaviour
 {
-    //Yani artýk tüm mantýðýmýz yanlýzca bir android ise derlencek. 
-    #if UNITY_ANDROID
+    //Yani artýk tüm mantýðýmýz yanlýzca bir android ise derlencek.
+#if UNITY_ANDROID
     private const string ChannelId = "notification_channel";
     public void ScheduleNotification(DateTime dateTime)
     {
@@ -34,5 +34,5 @@ public class AndroidNotificationHandler : MonoBehaviour
 
         AndroidNotificationCenter.SendNotification(notification, ChannelId);
     }
-    #endif
+#endif
 }
