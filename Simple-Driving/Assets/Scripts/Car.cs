@@ -20,8 +20,12 @@ public class Car : MonoBehaviour
     {
         if (other.CompareTag("Obstacle"))
             SceneManager.LoadScene(0);
-           //SceneManager.LoadScene("Scene_MainMenu");
+            //SceneManager.LoadScene("Scene_MainMenu");
+        
+        if (other.CompareTag("End"))
+            SceneManager.LoadScene(2);
     }
+    
 
     public void Steer(int value)
     {
