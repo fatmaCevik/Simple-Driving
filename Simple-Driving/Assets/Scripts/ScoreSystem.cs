@@ -20,7 +20,7 @@ public class ScoreSystem : MonoBehaviour
     private void OnDestroy()  //en yüksek score u kaydediyor.
     {
         //int currentHighScore = PlayerPrefs.GetInt("HighScore", 0);
-        int currentHighScore = PlayerPrefs.GetInt(HighScoreKey);
+        int currentHighScore = PlayerPrefs.GetInt(HighScoreKey, 0);
 
         if(score > currentHighScore)
         {  
